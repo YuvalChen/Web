@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>OfekTwitter</title>
-    <link rel="stylesheet" type="text/css" href="Main.css">
+    <link rel="stylesheet" type="text/css" href="OfekTwitter.css">
+    <link rel="stylesheet" type="text/css" href="Users.css">
 </head>
 <body>
 <nav class="ot-nav">
     <div id="logo">
-        <img src="images/ofek.png" height="13" width="13"/>
-        <a href="Main.css">OfekTwitter</a>
+        <img src="images/ofek.png" class="ofex_pic"/>
+        <a href="Main.html">OfekTwitter</a>
     </div>
-    <div id="div-list" style="float: right">
-        <ul id="ul_top_hypers" style="margin: 0;">
+    <div id="div-list">
+        <ul id="ul_top_hypers">
             <li class="header-btn">
-                <a href="Main.css">Sign in</a>
+                <a href="Users.html">Users</a>
             </li>
             <li class="header-btn">
-                <a href="Main.css">Sign up</a>
+                <a href="Users.html">Sign up</a>
             </li>
             <li class="header-btn">
-                <a href="Main.css">Users</a>
+                <a href="Users.html">Sign in</a>
             </li>
         </ul>
     </div>
 </nav>
 <br/>
 
-<div class="ot-body">
-    <div>
+<div>
+    <div style="width: 100%">
         <div class="search">
-            <span>Filter by </span>
+            <span id="filter_by">Filter by</span>
             <input id="filter_text" type="text" placeholder="user name"/>
-            <button>ok</button>
+            <input id="button_ok" type="button" value="ok">
         </div>
-        <div class="user-gallery pull-left">
+        <div>
             <div class="row">
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
+                        <img src="images/Person.png" class="person_img"/>
                     </div>
                     <div>
                         <button>follow</button>
@@ -47,9 +48,9 @@
                         <p>Marty McFly</p>
                     </div>
                 </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
+                        <img src="images/Person.png" class="person_img"/>
                     </div>
                     <div>
                         <button>follow</button>
@@ -58,10 +59,10 @@
                         <p>James Bond</p>
                     </div>
                 </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
                     </div>
+                    <img src="images/Person.png" class="person_img"/>
                     <div>
                         <button>unfollow</button>
                     </div>
@@ -69,9 +70,9 @@
                         <p>Janis Joplin</p>
                     </div>
                 </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
+                        <img src="images/Person.png" class="person_img"/>
                     </div>
                     <div>
                         <button>follow</button>
@@ -80,9 +81,9 @@
                         <p>Mark Twain</p>
                     </div>
                 </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
+                        <img src="images/Person.png" class="person_img"/>
                     </div>
                     <div>
                         <button>unfollow</button>
@@ -91,9 +92,9 @@
                         <p>Albert Einstein</p>
                     </div>
                 </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
+                        <img src="images/Person.png" class="person_img"/>
                     </div>
                     <div>
                         <button>follow</button>
@@ -102,9 +103,9 @@
                         <p>Frodo</p>
                     </div>
                 </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+                <div class="cell" align="center">
+                    <div>
+                        <img src="images/Person.png" class="person_img"/>
                     </div>
                     <div>
                         <button>follow</button>
@@ -117,11 +118,11 @@
         </div>
     </div>
 
-    <div class="pull-right followees-list">
-        <h2>Followees</h2>
-        <div class="cell user-cell followee-cell">
-            <div class="user-avatar-img">
-                <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+    <div class="pull-right followees-list" align="center">
+        <h2 id="followers_title" align="center">Followees</h2>
+        <div class="cell" align="center">
+            <div align="center">
+                <img src="images/Person.png" class="person_img"/>
             </div>
             <div>
                 <button>unfollow</button>
@@ -130,9 +131,9 @@
                 <p>Albert Einstein</p>
             </div>
         </div>
-        <div class="cell user-cell followee-cell">
-            <div class="user-avatar-img">
-                <img src="http://d33wubrfki0l68.cloudfront.net/187476b214e39af1f1448e57603b720b395dcb87/b2fdf/images/useravatar.png"/>
+        <div class="cell" align="center">
+            <div align="center">
+                <img src="images/Person.png" class="person_img"/>
             </div>
             <div>
                 <button>unfollow</button>
@@ -142,10 +143,6 @@
             </div>
         </div>
     </div>
-    <br class="clearFix"/>
 </div>
-
-
-
 </body>
 </html>

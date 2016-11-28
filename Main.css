@@ -1,84 +1,41 @@
-body {
-    margin: 0;
-}
-.ot-nav {
-    background-color: dodgerblue;
-
-}
-#logo{
-    font-family: Verdana;
-    font-size: 7px;
-    color: white;
-    display: inline-block;
-    text-shadow: 1px 1px black;
-    display: inline-block;
-}
-#logo a:visited {
-    color: white;
-}
-
-.header-btn {
-    font-size: 8px;
-}
-
-#ul_top_hypers {
-    text-align: right;
-    margin: 10px;
-}
-#ul_top_hypers li {
-    display: inline;
-    text-shadow: 1px 1px black;
-}
-
-#ul_top_hypers li a:visited {
-    color: white;
-}
 textarea {
     text-align: start;
 }
 
 #textarea {
-    height: 25px;
-    width: 250px;
-    font-size: 5px;
-    font-family: Verdana;
+    height: 61px;
+    width: 681px;
+    font-size: 13px;
+    font-family: Verdana, sans-serif;
 }
 #publish-button {
-    font-size: 4px;
+    font-size: 11px;
 }
 
 #divText {
-    padding-left: 70px;
+    padding-left: 165px;
 }
 #div-list {
     display: inline-block;
 }
 .tweets-section {
-    padding-left: 70px;
-    height: 25px;
-    width: 250px;
-    font-size: 5px;
-    font-family: Verdana;
+    padding-left: 165px;
+    height: 40px;
+    width: 300px;
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
 }
 
 .tweet-avatar {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     display: inline-block;
 }
 
 .tweet-username {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: italic;
     display: inline-block;
     vertical-align: top;
-}
-
-.search {
-    font-size: 50px;
-
-}
-
-#filter_text {
-    font-size: 5px;
+    margin-left: 12px;
 }
