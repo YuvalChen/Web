@@ -3,94 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <title>OfekTwitter</title>
-    <link rel="stylesheet" type="text/css" href="OfekTwitter.css">
-    <link rel="stylesheet" type="text/css" href="Main.css">
+    <link rel="stylesheet" type="text/css" href="NavBar.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
 </head>
 <body>
-<header>
-    <nav class="ot-nav">
-        <div class="logo">
-            <img class="ofex_pic" src="images/ofek.png"/>
-            <a href="Main.html">OfekTwitter</a>
-        </div>
-        <div id="div-list">
-            <ul id="ul_top_hypers">
-                <li class="header-btn">
-                    <a href="Users.html">Users</a>
-                </li>
-                <li class="header-btn">
-                    <a href="Users.html">Sign up</a>
-                </li>
-                <li class="header-btn">
-                    <a href="Users.html">Sign in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<br/>
-    <div id="divText">
-        <input type="text" id="textarea" placeholder="tweet text..." >
-        <button id="publish-button">publish</button>
-    </div>
-<br/>
+    <header id="header">
+        <nav class="navbar nav-color">
+            <div class="container">
+                <a class="navbar-brand" href="Main.html">
+                    <img id="ofek_image" class="navbar-brand image-logo" src="images/ofek.png"/>
+                    <span>OfekTwitter</span>
+                </a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation">
+                        <a href="Users.html">Users</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="Users.html">Sign up</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="Users.html">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <section class="tweets-section">
-    <div class="tweet-row">
-        <div class="tweet-avatar">
-            <img class="person_img" src="images/Person.png"/>
-        </div>
-        <div class="tweet-username">
-            <b>James Bond says:</b>
-            <br/>
-            Bond, James bond
+    <div class="container">
+        <textarea placeholder="tweet text..." class="form-control" rows="3"></textarea>
+        <button class="btn btn-primary btn-large pull-right">publish</button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="media col-lg-12">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="images/Person.png"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <b class="media-heading">James Bond says:</b>
+                    <br/>
+                    <span>Bond, James bond <a href="david.com">saddsa</a></span>
+                </div>
+            </div>
+            <div class="media col-lg-12">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="images/Person.png"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <b class="media-heading">James Bond says:</b>
+                    <br/>
+                    <span>Bond, James bond</span>
+                </div>
+            </div>
+            <div class="media col-lg-12">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="images/Person.png"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <b class="media-heading">James Bond says:</b>
+                    <br/>
+                    <span>Bond, James bond</span>
+                </div>
+            </div>
+            <div class="media col-lg-12">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="images/Person.png"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <b class="media-heading">James Bond says:</b>
+                    <br/>
+                    <span>Bond, James bond</span>
+                </div>
+            </div>
+            <div class="media col-lg-12">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="images/Person.png"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <b class="media-heading">James Bond says:</b>
+                    <br/>
+                    <span>Bond, James bond</span>
+                </div>
+            </div>
         </div>
     </div>
-        <br/>
-        <div class="tweet-row">
-            <div class="tweet-avatar">
-                <img src="images/Person.png"/>
-            </div>
-            <div class="tweet-username">
-                <b>James Bond says:</b>
-                <br/>
-                Bond, James bond
-            </div>
-        </div>
-        <br/>
-        <div class="tweet-row">
-            <div class="tweet-avatar">
-                <img src="images/Person.png"/>
-            </div>
-            <div class="tweet-username">
-                <b>James Bond says:</b>
-                <br/>
-                Bond, James bond
-            </div>
-        </div>
-        <br/>
-        <div class="tweet-row">
-            <div class="tweet-avatar">
-                <img src="images/Person.png"/>
-            </div>
-            <div class="tweet-username">
-                <b>James Bond says:</b>
-                <br/>
-                Bond, James bond
-            </div>
-        </div>
-        <br/>
-        <div class="tweet-row">
-            <div class="tweet-avatar">
-                <img src="images/Person.png"/>
-            </div>
-            <div class="tweet-username">
-                <b>James Bond says:</b>
-                <br/>
-                Bond, James bond
-            </div>
-        </div>
-        <br/>
-    </section>
 </body>
 </html>

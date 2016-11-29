@@ -1,0 +1,19 @@
+.nav-color {
+    background-color: #0a64eb;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#ofek_image {
+    height: 57px;
+    margin-top: -17px;
+}
+
+#header a:hover {
+    background-color: #0a64eb !important;
+    color: #d3d3d3;
+}

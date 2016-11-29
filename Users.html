@@ -3,143 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <title>OfekTwitter</title>
-    <link rel="stylesheet" type="text/css" href="OfekTwitter.css">
+    <link rel="stylesheet" type="text/css" href="NavBar.css">
     <link rel="stylesheet" type="text/css" href="Users.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
 </head>
 <body>
-<nav class="ot-nav">
-    <div id="logo">
-        <img src="images/ofek.png" class="ofex_pic"/>
-        <a href="Main.html">OfekTwitter</a>
-    </div>
-    <div id="div-list">
-        <ul id="ul_top_hypers">
-            <li class="header-btn">
-                <a href="Users.html">Users</a>
-            </li>
-            <li class="header-btn">
-                <a href="Users.html">Sign up</a>
-            </li>
-            <li class="header-btn">
-                <a href="Users.html">Sign in</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<br/>
-
-<div>
-    <div style="width: 100%">
-        <div class="search">
-            <span id="filter_by">Filter by</span>
-            <input id="filter_text" type="text" placeholder="user name"/>
-            <input id="button_ok" type="button" value="ok">
+<header id="header">
+    <nav class="navbar nav-color">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img id="ofek_image" class="navbar-brand image-logo" src="images/ofek.png"/>
+                <span>OfekTwitter</span>
+            </a>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation">
+                    <a href="Users.html">Users</a>
+                </li>
+                <li role="presentation">
+                    <a href="Users.html">Sign up</a>
+                </li>
+                <li role="presentation">
+                    <a href="Users.html">Sign in</a>
+                </li>
+            </ul>
         </div>
-        <div>
-            <div class="row">
-                <div class="cell" align="center">
-                    <div>
-                        <img src="images/Person.png" class="person_img"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <input type="text" class="form-control" placeholder="filter by user name">
+        </div>
+        <div class="col-lg-9">
+            <button type="button" class="btn btn-primary">Ok</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-10">
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
                         <p>Marty McFly</p>
                     </div>
                 </div>
-                <div class="cell" align="center">
-                    <div>
-                        <img src="images/Person.png" class="person_img"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>James Bond</p>
-                    </div>
-                </div>
-                <div class="cell" align="center">
-                    <div>
-                    </div>
-                    <img src="images/Person.png" class="person_img"/>
-                    <div>
-                        <button>unfollow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Janis Joplin</p>
-                    </div>
-                </div>
-                <div class="cell" align="center">
-                    <div>
-                        <img src="images/Person.png" class="person_img"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Mark Twain</p>
-                    </div>
-                </div>
-                <div class="cell" align="center">
-                    <div>
-                        <img src="images/Person.png" class="person_img"/>
-                    </div>
-                    <div>
-                        <button>unfollow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Albert Einstein</p>
-                    </div>
-                </div>
-                <div class="cell" align="center">
-                    <div>
-                        <img src="images/Person.png" class="person_img"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Frodo</p>
-                    </div>
-                </div>
-                <div class="cell" align="center">
-                    <div>
-                        <img src="images/Person.png" class="person_img"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Bill Gates</p>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="pull-right followees-list" align="center">
-        <h2 id="followers_title" align="center">Followees</h2>
-        <div class="cell" align="center">
-            <div align="center">
-                <img src="images/Person.png" class="person_img"/>
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <button>unfollow</button>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
             </div>
-            <div class="user-cell-name">
-                <p>Albert Einstein</p>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly amit orenshgif</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2" align="center">
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Follow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="cell" align="center">
-            <div align="center">
-                <img src="images/Person.png" class="person_img"/>
-            </div>
-            <div>
-                <button>unfollow</button>
-            </div>
-            <div class="user-cell-name">
-                <p>Janis Joplin</p>
+        <div class="col-lg-2" align="center">
+            <div class="followers-border">
+                <h3>Followeers</h3>
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">UnFollow</a>
+                        </p>
+                        <p>Marty McFly amir orensthin</p>
+                    </div>
+                </div>
+
+                <div class="thumbnail followers">
+                    <img src="images/Person.png"/>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">UnFollow</a>
+                        </p>
+                        <p>Marty McFly</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
