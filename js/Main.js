@@ -75,11 +75,13 @@ function testCleanTextBox() {
 function loadPage() {
     rowInput = document.getElementById("row");
     loadTweets();
-
     test_group('Publish valid', function () {
         assert(testPublishAdding(), "Cheacking if publish adding");
         assert(testNotPublishEmptyString(), "Cheacking not publish empty string");
         assert(testCleanTextBox(), "Cheacking cleaning textbox area after publish");
     });
+
+    // bug with the testing
+    rowInput = document.getElementById("row");
 }
 

@@ -21,7 +21,6 @@ function loadTweets() {
         if (users[user].username.includes(inputText)) {
             document.getElementById("all-users").innerHTML += elements;
         }
-
         if (users[user].follow)
         {
             elements = "<div class='thumbnail followers'><img src=" + users[user].image + "/><div class='caption'><p><a href='#' id='" + users[user].username + "' onclick=" + onClickString + " class='btn btn-primary button-class-color " + users[user].username + "' role='button'></a></p><p>" + users[user].username + "</p></div></div>"
@@ -32,21 +31,14 @@ function loadTweets() {
 };
 
 function ButtonProperties (currUser){
-
-    if (currUser.follow) {
-        var attributeRemove = "btn-primary"
-        var attributeAdd = "btn-default"
-    }
-    else  {
-        var attributeRemove = "btn-default"
-        var attributeAdd = "btn-primary"
-    }
-
+    var defaultButton = "btn-default";
+    var primaryButton = "btn-primary";
     var objectsList = document.getElementsByClassName(currUser.username);
 
     for (var index = 0; index< objectsList.length; index++) {
-        objectsList[index].classList.add(attributeAdd);
-        objectsList[index].classList.remove(attributeRemove);
+        objectClasses = objectsList[index].classList;
+        currUser.follow ? objectClasses.add(defaultButton) : objectClasses.add(primaryButton)
+        currUser.follow ? objectClasses.remove(primaryButton) : objectClasses.remove(defaultButton)
         objectsList[index].innerHTML = currUser.follow ? "UnFollow" : "Follow";
     }
 }
