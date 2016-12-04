@@ -1,0 +1,29 @@
+.group-success {
+    background-color: #bafdba;
+}
+
+.group-failed {
+    background-color: #d9534f;
+}
+
+.test-failed {
+    padding: 5px;
+    margin: 5px;
+    border: solid #000 1px;
+    background-color: #d9534f;
+}
+.test-success {
+    padding: 5px;
+    margin: 5px;
+    border: solid #000 1px;
+    background-color: #bafdba;
+}
+
+#ul-id {
+    list-style-type: none;
+}
+
+#test-group-id {
+    padding: 5px;
+    margin: 5px;
+}

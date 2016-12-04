@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OfekTwitter</title>
+    <link rel="stylesheet" type="text/css" href="../css/NavBar.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/Testing.css">
+    <link rel="stylesheet" href="../css/Main.css">
+    <script src="../js/OfekTestFramework.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar nav-color">
+            <div class="container">
+                <a class="navbar-brand" href="Main.html">
+                    <img id="ofek_image" class="navbar-brand image-logo" src="../images/ofek.png"/>
+                    <span>OfekTwitter</span>
+                </a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation">
+                        <a href="Users.html">Users</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="Users.html">Sign up</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="Users.html">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <textarea id="text-publish" placeholder="tweet text..." class="form-control" rows="3"></textarea>
+        <button class="btn btn-primary btn-large pull-right" onclick="PublishTweet()">publish</button>
+        <div id="wrong-message"></div>
+    </div>
+
+    <div class="container">
+        <div id="row" class="row">
+        </div>
+    </div>
+    <div id="testing" class="container">
+    </div>
+    <script src="../js/Main.js"></script>
+
+</body>
+</html>

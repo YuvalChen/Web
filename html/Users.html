@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OfekTwitter</title>
+    <link rel="stylesheet" type="text/css" href="../css/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="../css/Users.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+</head>
+<body>
+<header id="header">
+    <nav class="navbar nav-color">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img id="ofek_image" class="navbar-brand image-logo" src="../images/ofek.png"/>
+                <span>OfekTwitter</span>
+            </a>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation">
+                    <a href="Users.html">Users</a>
+                </li>
+                <li role="presentation">
+                    <a href="Users.html">Sign up</a>
+                </li>
+                <li role="presentation">
+                    <a href="Users.html">Sign in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <input type="text" id="text_filter" class="form-control" onkeyup="filterByName()" placeholder="filter by user name">
+        </div>
+        <div class="col-lg-9">
+            <button type="button" class="btn btn-primary">Ok</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-10" id="all-users">
+    </div>
+        <div class="col-lg-2" align="center">
+            <div class="followers-border">
+                <h3>Followeers</h3>
+                    <div id="all-following">
+
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/Users.js"></script>
+</div>
+</body>
+</html>
