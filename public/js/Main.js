@@ -1,15 +1,14 @@
 var tweets = [];
 var users = [];
+var myUser;
 
-var myUsername = "Yuval";
-var hardCodedId = "cc707c95-f1e3-4caf-906d-f9dd1f394b99";
-
-window.addEventListener('load', loadPage(), false);
+window.addEventListener('load', loadTweetsFromServer(), false);
 
 function loadTweetsFromServer() {
     var promises = [];
     promises.push(getTweets());
     promises.push(getUsers());
+    promises.push(getUserById());
 
     function getTweets() {
         return axios.get('http://localhost:8000/tweets');
@@ -19,33 +18,59 @@ function loadTweetsFromServer() {
         return axios.get('http://localhost:8000/users');
     }
 
+    function getUserById() {
+        return axios.get('http://localhost:8000/myUser');
+    }
+
     axios.all(promises)
-        .then(axios.spread(function (responseTweets, responseUsers) {
+        .then(axios.spread(function (responseTweets, responseUsers, responseMyUser) {
             tweets = responseTweets.data;
             users = responseUsers.data;
-            matchTweetAndUser(users);
+            myUser = responseMyUser.data;
+            matchTweetAndUser();
             loadTweets();
         }));
 }
 
-function matchTweetAndUser(users) {
-    for (currTweet in tweets) {
-        for (cuurUser in users) {
-            if (tweets[currTweet].user == users[cuurUser]._id) {
-                tweets[currTweet].username = users[cuurUser].username;
+function matchTweetAndUser() {
+    var myFollowingTweets = [];
+
+    for (var currTweet of tweets) {
+        if (myUser._id === currTweet.user) {
+            myFollowingTweets.push(currTweet);
+        }
+        for (var following of myUser.following) {
+            if (following === currTweet.user) {
+                myFollowingTweets.push(currTweet);
+            }
+        }
+    }
+    tweets = myFollowingTweets;
+    addAttribute();
+
+}
+function addAttribute () {
+    for (var currTweet of tweets) {
+        for (var cuurUser of users) {
+            if (currTweet.user == cuurUser._id) {
+                currTweet.username = cuurUser.username;
                 break;
             }
         }
     }
 }
-
 function loadTweets() {
     $("#row").printText("");
-    for (tweet in tweets) {
-        var elements = "<div class='media col-lg-12'> <div class='media-left'> <a href='#'> <img src='images/Person.png'/> </a> </div> <div class='media-body'> <b class='media-heading'> " + tweets[tweet].username + "</b> <br/> <span>" + tweets[tweet].text + "</span></div></div>"
-        $("#row").printText($("#row").getText() + elements);
+    for (var tweet of tweets) {
+        printingToHtml(tweet);
     }
 }
+
+function printingToHtml (tweet) {
+    var elements = "<div class='media col-lg-12'> <div class='media-left'> <a href='#'> <img src='images/Person.png'/> </a> </div> <div class='media-body'> <b class='media-heading'> " + tweet.username + "</b> <br/> <span>" + tweet.text + "</span></div></div>";
+    $("#row").printText($("#row").getText() + elements);
+}
+
 
 function PublishTweet() {
     var textInput = $("#text-publish");
@@ -56,16 +81,13 @@ function PublishTweet() {
     }
     else {
         tweet = tweet.replace(/[<]/g, '&lt').replace(/[>]/g, '&gt');
-        var newTweet = {user: hardCodedId, text: tweet};
+        var newTweet = {user: myUser._id, text: tweet};
         sendToServer(newTweet);
+        tweets.push(newTweet);
         textInput.value("");
         $("#wrong-message").printText("");
-
-        axios.get('http://localhost:8000/users/' + newTweet.user).then(function (res) {
-                var elements = "<div class='media col-lg-12'> <div class='media-left'><a href='#'> <img src='images/Person.png'/> </a> </div> <div class='media-body'> <b class='media-heading'> " + res.data.username + "</b> <br/> <span>" + newTweet.text + "</span></div></div>"
-                $("#row").printText($("#row").getText() + elements);
-        }
-        )
+        addAttribute();
+        printingToHtml(newTweet);
     }
 }
 
@@ -74,9 +96,21 @@ function sendToServer(newTweet) {
         newTweet
     }).then(function (response) {
     }).catch(function (error) {
-            console.log(error);
-        });
+        console.log(error);
+    });
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 function testPublishAdding() {
     var textInput = $("#text-publish");
@@ -105,7 +139,6 @@ function testNotPublishEmptyString() {
     return result;
 }
 
-
 function testCleanTextBox() {
     var textInput = $("#text-publish");
     textInput.value("testing");
@@ -124,5 +157,5 @@ function loadPage() {
     //     assert(testNotPublishEmptyString(), "Cheacking not publish empty string");
     //     assert(testCleanTextBox(), "Cheacking cleaning textbox area after publish");
     // });
-    loadTweetsFromServer();
+    //loadTweetsFromServer();
 }

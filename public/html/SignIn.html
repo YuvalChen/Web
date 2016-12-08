@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>OfekTwitter</title>
     <link rel="stylesheet" type="text/css" href="../css/NavBar.css">
-    <link rel="stylesheet" type="text/css" href="../css/Users.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/Users.css">-->
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/SignIn.css">
 </head>
 <body>
 <header id="header">
@@ -31,31 +32,36 @@
     </nav>
 </header>
 
-<div class="container">
+<div class="container" align="center">
+    <br/>
     <div class="row">
-        <div class="col-lg-3">
-            <input type="text" id="text_filter" class="form-control" onkeyup="filterByName()" placeholder="filter by user name">
-        </div>
-        <div class="col-lg-9">
-            <button type="button" class="btn btn-primary">Ok</button>
+        <div class="col-lg-5 col-lg-offset-3">
+            <input type="text" id="username_id" class="form-control" placeholder="Username">
         </div>
     </div>
     <br/>
     <div class="row">
-        <div class="col-lg-10" id="all-users">
-    </div>
-        <div class="col-lg-2" align="center">
-            <div class="followers-border">
-                <h3>Followeers</h3>
-                    <div id="all-following">
-
-                    </div>
-            </div>
+        <div class="col-lg-5 col-lg-offset-3">
+            <input type="text" id="password_id" class="form-control" placeholder="Password">
         </div>
     </div>
-    <script src="../node_modules/axios/dist/axios.js"></script>
-    <script src="../js/OfekQuery.js"></script>
-    <script src="../js/Users.js"></script>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-lg-5 col-lg-offset-3">
+            <a href="Users.html">
+            <button type="button" class="btn btn-primary" onclick="loadUsers()">Sign In</button>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div id="wrong-message"></div>
+    </div>
+</div>
+<br/>
+<script src="../node_modules/axios/dist/axios.js"></script>
+<script src="../js/OfekQuery.js"></script>
+<script src="../js/SignIn.js"></script>
 </div>
 </body>
 </html>
