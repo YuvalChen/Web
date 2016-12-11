@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>OfekTwitter</title>
     <link rel="stylesheet" type="text/css" href="css/NavBar.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/Testing.css">
     <link rel="stylesheet" href="css/Main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
 
 </head>
 <body>
@@ -19,6 +19,9 @@
                     <span>OfekTwitter</span>
                 </a>
                 <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation">
+                        <a id="userName" href=""></a>
+                    </li>
                     <li role="presentation">
                         <a href="html/Users.html">Users</a>
                     </li>
@@ -50,6 +53,7 @@
     </div>
     <script src="node_modules/axios/dist/axios.js"></script>
     <script src="js/OfekQuery.js"></script>
+    <script src="js/MainService.js"></script>
     <script src="js/Main.js"></script>
 </body>
 </html>
