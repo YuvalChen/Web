@@ -9,17 +9,21 @@ function loadDataFromServer() {
     promises.push(loadFollowings());
 
     function loadUsersFromServer() {
-        return axios.get('http://localhost:8000/users');
+        return axios.get('/users');
     }
 
     function loadFollowings() {
-        return axios.get('http://localhost:8000/myUser');
+        return axios.get('/myUser');
     }
 
     axios.all(promises)
         .then(axios.spread(function (responseUser, responseFollowing) {
             myUsers = responseUser.data;
             currUserObject = responseFollowing.data;
+            if (currUserObject == "") {
+                window.location ="SignUp.html";
+            }
+            $("#userName").printText(currUserObject.username);
             insertAttribue();
             loadUsers();
         }));
@@ -37,6 +41,7 @@ function loadUsers() {
         if (user.username.includes($("#text_filter").value())) {
             $("#all-users").printText($("#all-users").getText() + elements);
         }
+
         if (user.follow) {
             elements = "<div class='thumbnail followers'><img src='" + image + "'/><div class='caption'><p><a href='#' id='" + user._id + "' onclick=" + onClickString + " class='btn btn-primary button-class-color " + user._id + "' role='button'></a></p><p>" + user.username + "</p></div></div>";
             $("#all-following").printText($("#all-following").getText() + elements);
@@ -123,7 +128,7 @@ function FollowSwitch(id) {
 };
 
 function updateServerFollowing(jsonNewFollowing) {
-    axios.put('http://localhost:8000/users/' + currUserObject._id, {jsonNewFollowing})
+    axios.put('/users', jsonNewFollowing)
         .then(function (response) {
         }).catch(function (error) {
         console.log(error);
