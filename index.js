@@ -4,8 +4,8 @@ var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
 var id = 1;
-var usersFileName = 'users.json';
-var tweetsFileName = 'tweet.json';
+var usersFileName = './db/users.json';
+var tweetsFileName = './db/tweet.json';
 var session = require('express-session');
 
 PORT = 8000;

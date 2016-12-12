@@ -33,7 +33,11 @@ function $(element) {
         }
         result = newResult;
     }
+    if (result == null || result == "" || result == undefined) {
+        return null
+    }
     return new OfekQuery(result);
+
 
     function AddCollection(collection, classes) {
         for (currClass of classes) {
@@ -86,8 +90,8 @@ OfekQuery.prototype.all = function () {
 };
 
 function CheackObject(object, funList) {
-    for (index = 0; index < funList.length; index++) {
-        if (!arguments[index](object)) {
+    for (var cuurObject of funList) {
+        if (!cuurObject (object)) {
             return false;
         }
     }
